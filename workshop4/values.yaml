@@ -1,0 +1,16 @@
+controller:
+    publishService:
+        enabled: true
+    config:
+        enable-opentracing: "true"
+        jaeger-collector-host: "jaeger-agent.istio-system.svc.cluster.local"
+        jaeger-collector-port: "6831"
+        jaeger-collector-host: "zipkin.istio-system.svc.cluster.local"
+        jaeger-collector-port: "9411"
+defaultBackend:
+    enable: true
+    image:
+        repository: chukmunnlee/ingress_default_backend
+        tag: v1
+    port: 3000
+    
